@@ -11,7 +11,7 @@ import com.example.android.composition.databinding.FragmentGameFinishedBinding
 import com.example.android.composition.domain.entity.GameResult
 
 class GameFinishedFragment : Fragment() {
-    private lateinit var result: GameResult
+    private lateinit var gameResult: GameResult
 
     private var _binding: FragmentGameFinishedBinding? = null
     private val binding: FragmentGameFinishedBinding
@@ -39,6 +39,9 @@ class GameFinishedFragment : Fragment() {
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
+        binding.btnRetry.setOnClickListener {
+            retryGame()
+        }
     }
 
     override fun onDestroyView() {
@@ -54,16 +57,18 @@ class GameFinishedFragment : Fragment() {
     }
 
     private fun parseArgs() {
-        result = requireArguments().getSerializable(KEY_RESULT) as GameResult
+        requireArguments().getParcelable<GameResult>(KEY_RESULT)?.let {
+            gameResult = it
+        }
     }
 
     companion object {
-        private const val KEY_RESULT = "result"
+        private const val KEY_RESULT = "game_result"
 
         fun newInstance(result: GameResult): GameFinishedFragment {
             return GameFinishedFragment().apply {
                 arguments = Bundle().apply {
-                    putSerializable(KEY_RESULT, result)
+                    putParcelable(KEY_RESULT, result)
                 }
             }
         }
