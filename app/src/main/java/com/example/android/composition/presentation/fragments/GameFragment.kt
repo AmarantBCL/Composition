@@ -1,4 +1,4 @@
-package com.example.android.composition.presentation
+package com.example.android.composition.presentation.fragments
 
 import android.media.MediaFormat.KEY_LEVEL
 import android.os.Bundle
