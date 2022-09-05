@@ -51,12 +51,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/teal_700"
+        android:text="@string/question_mark"
         app:layout_constraintBottom_toBottomOf="@id/left_number"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/left_number"
-        app:layout_constraintTop_toTopOf="@id/left_number"
-        tools:text="@string/question_mark" />
+        app:layout_constraintTop_toTopOf="@id/left_number" />
 
     <TextView
         android:id="@+id/tv_answer_progress"
@@ -64,12 +64,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/regular_margin"
         android:gravity="center"
+        android:text="@string/right_answers"
         app:layout_constraintBottom_toTopOf="@id/progress_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/left_number"
-        app:layout_constraintVertical_chainStyle="spread"
-        tools:text="Правильных ответов %s из %s необходимых" />
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <ProgressBar
         android:id="@+id/progress_bar"
