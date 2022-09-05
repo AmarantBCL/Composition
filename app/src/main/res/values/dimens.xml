@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="brain_image_height">150dp</dimen>
+    <dimen name="big_margin">32dp</dimen>
+    <dimen name="regular_margin">16dp</dimen>
+    <dimen name="headline_text_size">24sp</dimen>
+    <dimen name="regular_text_size">16sp</dimen>
+    <dimen name="half_margin">8dp</dimen>
+    <dimen name="huge_margin">48dp</dimen>
+    <dimen name="bigger_text_size">18sp</dimen>
+</resources>
