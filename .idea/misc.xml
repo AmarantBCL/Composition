@@ -12,6 +12,11 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Composition/app/src/main/res/layout/fragment_game.xml" value="0.77" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Composition/app/src/main/res/layout/fragment_game_finished.xml" value="0.77" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Composition/app/src/main/res/layout/fragment_welcome.xml" value="0.77" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16875" />
+        <entry key="app/src/main/res/layout/fragment_choose_level.xml" value="0.16875" />
+        <entry key="app/src/main/res/layout/fragment_game.xml" value="0.16875" />
+        <entry key="app/src/main/res/layout/fragment_game_finished.xml" value="0.16875" />
+        <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.16875" />
       </map>
     </option>
   </component>
