@@ -2,7 +2,6 @@
 <layout xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="gameResult"
             type="com.example.android.composition.domain.entity.GameResult" />
