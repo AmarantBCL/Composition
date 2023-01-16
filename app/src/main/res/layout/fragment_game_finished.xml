@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="gameResult"
             type="com.example.android.composition.domain.entity.GameResult" />
@@ -22,56 +23,61 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_smile" />
+            app:winner="@{gameResult.winner}"
+            tools:srcCompat="@drawable/ic_smile" />
 
         <TextView
             android:id="@+id/tv_required_answers"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/regular_margin"
-            android:text="@{gameResult.gameSettings.minCountOfRightAnswersString}"
             android:textSize="@dimen/bigger_text_size"
             app:layout_constraintBottom_toTopOf="@id/tv_score"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintVertical_chainStyle="packed"
+            app:requiredAnswers="@{gameResult.gameSettings.minCountOfRightAnswers}"
+            tools:text="@string/required_score" />
 
         <TextView
             android:id="@+id/tv_score"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/regular_margin"
-            android:text="@{gameResult.countOfRightAnswersString}"
             android:textSize="@dimen/bigger_text_size"
             app:layout_constraintBottom_toTopOf="@id/tv_required_percent_answers"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_required_answers" />
+            app:layout_constraintTop_toBottomOf="@id/tv_required_answers"
+            app:rightAnswers="@{gameResult.countOfRightAnswers}"
+            tools:text="@string/score_answers" />
 
         <TextView
             android:id="@+id/tv_required_percent_answers"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/regular_margin"
-            android:text="@{gameResult.gameSettings.minPercentOfRightAnswersString}"
             android:textSize="@dimen/bigger_text_size"
             app:layout_constraintBottom_toTopOf="@id/tv_percent_answers"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_score" />
+            app:layout_constraintTop_toBottomOf="@id/tv_score"
+            app:requiredRightAnswersPercent="@{gameResult.gameSettings.minPercentOfRightAnswers}"
+            tools:text="@string/required_percentage" />
 
         <TextView
             android:id="@+id/tv_percent_answers"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/regular_margin"
-            android:text="@string/score_percentage"
             android:textSize="@dimen/bigger_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_required_percent_answers" />
+            app:layout_constraintTop_toBottomOf="@id/tv_required_percent_answers"
+            app:rightAnswersPercent="@{gameResult}"
+            tools:text="@string/score_percentage" />
 
         <Button
             android:id="@+id/btn_retry"
